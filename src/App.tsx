@@ -1,15 +1,9 @@
 import React from 'react';
 import {SafeAreaView, StatusBar, Text} from 'react-native';
+import {SplashScreen} from './pages';
 
 const App = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text>Hellod Food Market App</Text>
-      </SafeAreaView>
-    </>
-  );
+  return <SplashScreen></SplashScreen>;
 };
 
 export default App;
