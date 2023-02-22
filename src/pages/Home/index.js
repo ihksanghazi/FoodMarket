@@ -15,7 +15,7 @@ import {
   ProfileDummy,
 } from '../../assets';
 import {FoodCard, Gap} from '../../components';
-import {TabView, SceneMap} from 'react-native-tab-view';
+import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 
 const FirstRoute = () => <View style={{flex: 1, backgroundColor: '#ff4081'}} />;
 
@@ -28,6 +28,27 @@ const renderScene = SceneMap({
   2: SecondRoute,
   3: FirstRoute,
 });
+
+const renderTabBar = props => (
+  <TabBar
+    {...props}
+    indicatorStyle={{
+      backgroundColor: '#020202',
+      height: 3,
+    }}
+    style={{backgroundColor: 'white'}}
+    tabStyle={{}}
+    renderLabel={({route, focused, color}) => (
+      <Text
+        style={{
+          fontFamily: 'Poppins-Medium',
+          color: focused ? '#020202' : '#8D92A3',
+        }}>
+        {route.title}
+      </Text>
+    )}
+  />
+);
 
 const Home = () => {
   const layout = useWindowDimensions();
@@ -60,6 +81,7 @@ const Home = () => {
       </View>
       <View style={styles.tabContainer}>
         <TabView
+          renderTabBar={renderTabBar}
           navigationState={{index, routes}}
           renderScene={renderScene}
           onIndexChange={setIndex}
