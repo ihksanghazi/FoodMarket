@@ -14,30 +14,34 @@ import {useNavigation} from '@react-navigation/native';
 const NewTaste = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView style={{paddingTop: 8}}>
+    <ScrollView style={{paddingTop: 8, paddingHorizontal: 24}}>
       <ItemListFood
         image={FoodDummy1}
         onPress={() => navigation.navigate('FoodDetail')}
         title="Cherry Healthy"
         price="50.000"
+        rating
       />
       <ItemListFood
         image={FoodDummy2}
         onPress={() => navigation.navigate('FoodDetail')}
         title="Avosalado"
         price="55.000"
+        rating
       />
       <ItemListFood
         image={FoodDummy3}
         onPress={() => navigation.navigate('FoodDetail')}
         title="Kari Sleman"
         price="60.000"
+        rating
       />
       <ItemListFood
         image={FoodDummy4}
         onPress={() => navigation.navigate('FoodDetail')}
         title="Kopi Kudda"
         price="65.000"
+        rating
       />
     </ScrollView>
   );
@@ -46,24 +50,27 @@ const NewTaste = () => {
 const Popular = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView style={{paddingTop: 8}}>
+    <ScrollView style={{paddingTop: 8, paddingHorizontal: 24}}>
       <ItemListFood
         onPress={() => navigation.navigate('FoodDetail')}
         image={FoodDummy1}
         title="Cherry Healthy"
         price="50.000"
+        rating
       />
       <ItemListFood
         onPress={() => navigation.navigate('FoodDetail')}
         image={FoodDummy4}
         title="Kopi Kudda"
         price="65.000"
+        rating
       />
       <ItemListFood
         onPress={() => navigation.navigate('FoodDetail')}
         image={FoodDummy2}
         title="Avosalado"
         price="55.000"
+        rating
       />
     </ScrollView>
   );
@@ -72,30 +79,34 @@ const Popular = () => {
 const Recommended = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView style={{paddingTop: 8}}>
+    <ScrollView style={{paddingTop: 8, paddingHorizontal: 24}}>
       <ItemListFood
         onPress={() => navigation.navigate('FoodDetail')}
         image={FoodDummy4}
         title="Kopi Kudda"
         price="65.000"
+        rating
       />
       <ItemListFood
         onPress={() => navigation.navigate('FoodDetail')}
         image={FoodDummy3}
         title="Kari Sleman"
         price="60.000"
+        rating
       />
       <ItemListFood
         onPress={() => navigation.navigate('FoodDetail')}
         image={FoodDummy2}
         title="Avosalado"
         price="55.000"
+        rating
       />
       <ItemListFood
         onPress={() => navigation.navigate('FoodDetail')}
         image={FoodDummy1}
         title="Cherry Healthy"
         price="50.000"
+        rating
       />
     </ScrollView>
   );
