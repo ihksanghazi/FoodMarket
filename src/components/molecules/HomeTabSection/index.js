@@ -9,35 +9,94 @@ import {
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4} from '../../../assets';
 import ItemListFood from '../ItemListFood';
+import {useNavigation} from '@react-navigation/native';
 
 const NewTaste = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView style={{paddingTop: 8}}>
-      <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="50.000" />
-      <ItemListFood image={FoodDummy2} title="Avosalado" price="55.000" />
-      <ItemListFood image={FoodDummy3} title="Kari Sleman" price="60.000" />
-      <ItemListFood image={FoodDummy4} title="Kopi Kudda" price="65.000" />
+      <ItemListFood
+        image={FoodDummy1}
+        onPress={() => navigation.navigate('FoodDetail')}
+        title="Cherry Healthy"
+        price="50.000"
+      />
+      <ItemListFood
+        image={FoodDummy2}
+        onPress={() => navigation.navigate('FoodDetail')}
+        title="Avosalado"
+        price="55.000"
+      />
+      <ItemListFood
+        image={FoodDummy3}
+        onPress={() => navigation.navigate('FoodDetail')}
+        title="Kari Sleman"
+        price="60.000"
+      />
+      <ItemListFood
+        image={FoodDummy4}
+        onPress={() => navigation.navigate('FoodDetail')}
+        title="Kopi Kudda"
+        price="65.000"
+      />
     </ScrollView>
   );
 };
 
 const Popular = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView style={{paddingTop: 8}}>
-      <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="50.000" />
-      <ItemListFood image={FoodDummy4} title="Kopi Kudda" price="65.000" />
-      <ItemListFood image={FoodDummy2} title="Avosalado" price="55.000" />
+      <ItemListFood
+        onPress={() => navigation.navigate('FoodDetail')}
+        image={FoodDummy1}
+        title="Cherry Healthy"
+        price="50.000"
+      />
+      <ItemListFood
+        onPress={() => navigation.navigate('FoodDetail')}
+        image={FoodDummy4}
+        title="Kopi Kudda"
+        price="65.000"
+      />
+      <ItemListFood
+        onPress={() => navigation.navigate('FoodDetail')}
+        image={FoodDummy2}
+        title="Avosalado"
+        price="55.000"
+      />
     </ScrollView>
   );
 };
 
 const Recommended = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView style={{paddingTop: 8}}>
-      <ItemListFood image={FoodDummy4} title="Kopi Kudda" price="65.000" />
-      <ItemListFood image={FoodDummy3} title="Kari Sleman" price="60.000" />
-      <ItemListFood image={FoodDummy2} title="Avosalado" price="55.000" />
-      <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="50.000" />
+      <ItemListFood
+        onPress={() => navigation.navigate('FoodDetail')}
+        image={FoodDummy4}
+        title="Kopi Kudda"
+        price="65.000"
+      />
+      <ItemListFood
+        onPress={() => navigation.navigate('FoodDetail')}
+        image={FoodDummy3}
+        title="Kari Sleman"
+        price="60.000"
+      />
+      <ItemListFood
+        onPress={() => navigation.navigate('FoodDetail')}
+        image={FoodDummy2}
+        title="Avosalado"
+        price="55.000"
+      />
+      <ItemListFood
+        onPress={() => navigation.navigate('FoodDetail')}
+        image={FoodDummy1}
+        title="Cherry Healthy"
+        price="50.000"
+      />
     </ScrollView>
   );
 };
