@@ -1,28 +1,37 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {ILSuccessSignUp} from '../../assets';
+import {ILSuccessOrder} from '../../assets';
 import {Button, Gap} from '../../components';
 
-const SuccessSignUp = ({navigation}) => {
+const SuccessOrder = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <ILSuccessSignUp />
+      <ILSuccessOrder />
       <Gap height={30} />
-      <Text style={styles.title}>Yeay! Completed</Text>
-      <Text style={styles.subtitle}>Now you are able to order</Text>
-      <Text style={styles.subtitle}>some foods as a self-reward</Text>
+      <Text style={styles.title}>You’ve Made Order</Text>
+      <Text style={styles.subtitle}>Just stay at home while we are</Text>
+      <Text style={styles.subtitle}>preparing your best foods</Text>
       <Gap height={30} />
       <View style={styles.buttonContainer}>
         <Button
-          text="Find Foods"
+          text="Order Other Foods"
           onPress={() => navigation.replace('MainApp')}
+        />
+      </View>
+      <Gap height={12} />
+      <View style={styles.buttonContainer}>
+        <Button
+          color="#8D92A3"
+          textColor="#F9FAFF"
+          text="View My Order"
+          onPress={() => navigation.replace('MainApp', {screen: 'Order'})}
         />
       </View>
     </View>
   );
 };
 
-export default SuccessSignUp;
+export default SuccessOrder;
 
 const styles = StyleSheet.create({
   page: {
