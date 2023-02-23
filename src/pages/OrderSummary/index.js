@@ -10,8 +10,9 @@ const OrderSummary = ({navigation}) => {
       <View style={styles.content}>
         <Text style={styles.label}>Item Ordered</Text>
         <ItemListFood
+          type="order-summary"
           image={FoodDummy1}
-          title="Soup Bumil"
+          name="Soup Bumil"
           price="25.000"
           items={25}
         />
