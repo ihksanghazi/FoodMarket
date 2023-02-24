@@ -17,7 +17,7 @@ const InProgress = () => {
     <ScrollView style={{paddingTop: 8, paddingHorizontal: 24}}>
       <ItemListFood
         image={FoodDummy1}
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         type="in-progress"
         name="Avosalado"
         items={3}
@@ -25,7 +25,7 @@ const InProgress = () => {
       />
       <ItemListFood
         image={FoodDummy2}
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         type="in-progress"
         name="Kopi Kudda"
         items={10}
@@ -33,7 +33,7 @@ const InProgress = () => {
       />
       <ItemListFood
         image={FoodDummy3}
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         type="in-progress"
         name="Es Tong-Tong"
         items={2}
@@ -41,7 +41,7 @@ const InProgress = () => {
       />
       <ItemListFood
         image={FoodDummy4}
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         type="in-progress"
         name="Bwang Puttie"
         items={10}
@@ -56,7 +56,7 @@ const PastOrders = () => {
   return (
     <ScrollView style={{paddingTop: 8, paddingHorizontal: 24}}>
       <ItemListFood
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         image={FoodDummy1}
         type="past-orders"
         name="Avosalado"
@@ -66,7 +66,7 @@ const PastOrders = () => {
         status="Cancelled"
       />
       <ItemListFood
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         image={FoodDummy4}
         type="past-orders"
         name="Bwang Puttie"
@@ -76,7 +76,7 @@ const PastOrders = () => {
         status="Cancelled"
       />
       <ItemListFood
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         image={FoodDummy2}
         type="past-orders"
         name="Kopi Kudda"
