@@ -1,13 +1,26 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 import {Header, TextInput, Gap, Button} from '../../components';
-import {useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import {useForm} from '../../utils';
 
 const SignUp = ({navigation}) => {
-  const globalState = useSelector(state => state.globalReducer);
-  console.log(globalState);
+  const [form, setForm] = useForm({
+    name: '',
+    email: '',
+    password: '',
+  });
+
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    console.log('form : ', form);
+    dispatch({type: 'SET_REGISTER', value: form});
+    navigation.navigate('SignUpAddress');
+  };
+
   return (
-    <View style={styles.page}>
+    <ScrollView style={styles.page}>
       <Header title="Sign Up" subtitle="Register and eat" onBack />
       <View style={styles.container}>
         <View style={styles.photo}>
@@ -17,22 +30,31 @@ const SignUp = ({navigation}) => {
             </View>
           </View>
         </View>
-        <Text>{`status error: ${globalState.isError}`}</Text>
-        <TextInput label="Full Name" placeholder="Type your full name" />
+        <TextInput
+          label="Full Name"
+          placeholder="Type your full name"
+          value={form.name}
+          onChangeText={value => setForm('name', value)}
+        />
         <Gap height={16} />
         <TextInput
           label="Email Address"
           placeholder="Type your email address"
+          value={form.email}
+          onChangeText={value => setForm('email', value)}
         />
         <Gap height={16} />
-        <TextInput label="Password" placeholder="Type your password" />
-        <Gap height={24} />
-        <Button
-          text="Continue"
-          onPress={() => navigation.navigate('SignUpAddress')}
+        <TextInput
+          label="Password"
+          placeholder="Type your password"
+          value={form.password}
+          onChangeText={value => setForm('password', value)}
+          secureTextEntry
         />
+        <Gap height={24} />
+        <Button text="Continue" onPress={onSubmit} />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
