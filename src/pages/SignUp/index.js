@@ -1,8 +1,11 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Header, TextInput, Gap, Button} from '../../components';
+import {useSelector} from 'react-redux';
 
 const SignUp = ({navigation}) => {
+  const globalState = useSelector(state => state.globalReducer);
+  console.log(globalState);
   return (
     <View style={styles.page}>
       <Header title="Sign Up" subtitle="Register and eat" onBack />
@@ -14,6 +17,7 @@ const SignUp = ({navigation}) => {
             </View>
           </View>
         </View>
+        <Text>{`status error: ${globalState.isError}`}</Text>
         <TextInput label="Full Name" placeholder="Type your full name" />
         <Gap height={16} />
         <TextInput
