@@ -48,8 +48,9 @@ const SignUp = ({navigation}) => {
             type: response.assets[0].type,
             name: response.assets[0].fileName,
           };
-
           setPhoto(source);
+          dispatch({type: 'SET_PHOTO', value: dataImage});
+          dispatch({type: 'SET_UPLOAD_STATUS', value: true});
         }
       },
     );
