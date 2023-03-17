@@ -58,7 +58,13 @@ const SignUp = ({navigation}) => {
 
   return (
     <ScrollView style={styles.page}>
-      <Header title="Sign Up" subtitle="Register and eat" onBack />
+      <Header
+        title="Sign Up"
+        subtitle="Register and eat"
+        onBack={() => {
+          navigation.goBack();
+        }}
+      />
       <View style={styles.container}>
         <View style={styles.photo}>
           <TouchableOpacity onPress={addPhoto}>
