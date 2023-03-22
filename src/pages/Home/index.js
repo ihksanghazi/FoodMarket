@@ -10,7 +10,6 @@ const Home = () => {
 
   const {food} = useSelector(state => state.homeReducer);
 
-  console.log(food);
   useEffect(() => {
     dispatch(getFoodData());
   }, []);
