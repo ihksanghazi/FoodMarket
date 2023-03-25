@@ -31,7 +31,7 @@ const NewTaste = () => {
             name={item.name}
             rating={item.rate}
             price={item.price}
-            onPress={() => navigation.navigate('FoodDetail')}
+            onPress={() => navigation.navigate('FoodDetail', item)}
           />
         );
       })}
@@ -57,7 +57,7 @@ const Popular = () => {
             name={item.name}
             rating={item.rate}
             price={item.price}
-            onPress={() => navigation.navigate('FoodDetail')}
+            onPress={() => navigation.navigate('FoodDetail', item)}
           />
         );
       })}
@@ -83,7 +83,7 @@ const Recommended = () => {
             name={item.name}
             rating={item.rate}
             price={item.price}
-            onPress={() => navigation.navigate('FoodDetail')}
+            onPress={() => navigation.navigate('FoodDetail', item)}
           />
         );
       })}
